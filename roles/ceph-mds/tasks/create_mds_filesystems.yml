@@ -52,4 +52,4 @@
   changed_when: false
   delegate_to: "{{ groups[mon_group_name][0] }}"
   when:
-    - mds_max_mds > 1
+    - mds_max_mds | int > 1
